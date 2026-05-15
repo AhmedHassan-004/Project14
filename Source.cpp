@@ -1,70 +1,69 @@
-//#include<iostream>
-//using namespace std;
-//int main()
-//{
-//	int a, b, c;
-//	cout << "Enter the first number:";
-//	cin >> a;
-//	cout << "Enter the second number:";
-//	cin >> b;
-//	cout << "Enter the third number:";
-//	cin >> c;
-//	try
-//	{
-//		if(a-b==0)
-//		{
-//			throw "Division by zero error!";
-//		}
-//		double calculate = (a + b + c) / (a - b);
-//		cout << "The result is: " << calculate << endl;
-//	}
-//	catch (const char* a)
-//	{
-//		cerr << a << endl;
-//	}
-//	return 0;
-//}
-//#include<iostream>
-//using namespace std;
-//void test(int a,char c);
-//int main()
-//{
-//	int a;
-//	char c;
-//	cout << "Testing Multiple Catches" << endl;
-//	cout << "Enter the integer value:";
-//	cin >> a;
-//	cout << "Enter the character:";
-//	cin >> c;
-//	test(a, c);
-//	return 0;
-//}
-//void test(int a, char c)
-//try
-//{
-//	if (a > 0)
-//	{
-//		throw a;
-//	}
-//	else
-//	{
-//		throw c;
-//	}
-//
-//   
-//	catch(int a)
-//	{
-//		cerr << "Caught an integer: " << a << endl;
-//	}
-//	catch (char c)
-//	{
-//		cerr << "Caught a character: " << c << endl;
-//
-//
+//TASK1
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a, b, c;
+cout << "Enter the first number:";
+cin >> a;	cout << "Enter the second number:";
+	cin >> b;
+	cout << "Enter the third number:";
+	cin >> c;
+	try
+	{
+		if(a-b==0)
+		{
+			throw "Division by zero error!";
+		}
+		double calculate = (a + b + c) / (a - b);
+		cout << "The result is: " << calculate << endl;
+	}
+	catch (const char* a)
+{
+		cerr << a << endl;
+	}
+	return 0;
+}
+//TASK2
+#include<iostream>
+using namespace std;
+void test(int a,char c);
+int main()
+{
+	int a;
+	char c;
+	cout << "Testing Multiple Catches" << endl;
+	cout << "Enter the integer value:";
+	cin >> a;
+	cout << "Enter the character:";
+	cin >> c;
+	test(a, c);
+	return 0;
+}
+void test(int a, char c)
+try
+{
+	if (a > 0)
+	{
+		throw a;
+	}
+	else
+	{
+		throw c;
+	}
+
+   
+catch(int a)
+   {
+		cerr << "Caught an integer: " << a << endl;
+	}
+	catch (char c)
+	{
+		cerr << "Caught a character: " << c << endl;
+
+//TASK 3
 #include <iostream>
 using namespace std;
-
-// ===== Custom Exception Class =====
 class OutOfRangeException {
 private:
     string message;
@@ -113,7 +112,7 @@ int main() {
  *   No out-of-range mark is used in calculation
  *
  * Exceptions:
- *   Throws OutOfRangeException if any mark < 0 or > 100
+  * Throws OutOfRangeException if any mark < 0 or > 100
  */
 float calculateAverage(int m1, int m2, int m3, int m4) {
     if (m1 < 0 || m1 > 100) throw OutOfRangeException("Mark is out of valid range (0-100).");
